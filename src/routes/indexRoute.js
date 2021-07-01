@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const config = require("../config-example.json");
+const config = require("../config.json");
 const hypixelAPI = require("hypixel-api");
 const client = new hypixelAPI(config.hypixelApiKey);
 
