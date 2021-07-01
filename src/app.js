@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const config = require("./config.json");
+const config = require("./config-example.json");
 const hypixelAPI = require("hypixel-api");
 const client = new hypixelAPI(config.hypixelApiKey);
 
@@ -11,4 +11,10 @@ app.use(express.static(__dirname));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {})
+const indexRoute = require("./routes/indexRoute");
+
+app.use('/', indexRoute);
+
+app.listen(3000, () => {
+    console.log("On http://localhost:3000");
+});
