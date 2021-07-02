@@ -1,2 +1,2 @@
 # hypixel-api-example
-A example on how to use the hypixel api.
+This is a example on how you can use the hypixel api. **THIS GUIDE IS USING A API WRAPPER**
