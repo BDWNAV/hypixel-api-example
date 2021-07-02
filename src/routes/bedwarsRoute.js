@@ -12,11 +12,12 @@ router.post('/', (req, res) => {
     client.getPlayer(req.body.username).then((player) => {
         res.render('bedwarstats', {
             player: player,
+            level: player.stats.bedwars.level,
             wins: player.stats.bedwars.wins 
         });
     }).catch((err) => {
         console.log(err);
-        return res.send("A error has occured.");
+        return res.send("A error has occured, there is probaly no record of that user playing bedwars or that user does not exist.");
     });
 });
 

@@ -4,3 +4,29 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.user-input {
+    padding: 15px;
+    color: white;
+    background-color: #0f0f0f;
+    border: none;
+    outline-width: 0px;
+    border-radius: 20px;
+}
+
+.check {
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 60px;
+    color: white;
+    background-color: #0f0f0f;
+    border: none;
+    border-radius: 15px;
+    outline-width: 0px;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.check:hover {
+    background-color: white;
+    color: black;
+}
