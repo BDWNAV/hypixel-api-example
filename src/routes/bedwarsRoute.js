@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const config = require("../config.json");
+const config = require("../config-example.json");
 const Hypixel = require("hypixel-api-reborn");
-const client = new Hypixel.Client(process.env.token);
+const client = new Hypixel.Client(process.env.hypixelApiKey);
 
 router.get('/', (req, res) => {
     res.render('bedwars');
