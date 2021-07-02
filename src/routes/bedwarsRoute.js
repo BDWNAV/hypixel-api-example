@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     client.getPlayer(req.body.username).then((player) => {
-        console.log(player.stats.bedwars.wins);
+        res.render('bedwarstats')
     }).catch((err) => {
         console.log(err);
     });
