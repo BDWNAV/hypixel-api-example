@@ -14,6 +14,6 @@ const bedwarsRoute = require("./routes/bedwarsRoute");
 app.use('/', indexRoute);
 app.use('/bedwars', bedwarsRoute);
 
-app.listen(process.env.port, () => {
+app.listen(process.env.PORT, () => {
     console.log("On a website.");
 });
