@@ -14,6 +14,6 @@ const bedwarsRoute = require("./routes/bedwarsRoute");
 app.use('/', indexRoute);
 app.use('/bedwars', bedwarsRoute);
 
-app.listen(3000, () => {
-    console.log("On http://localhost:3000");
+app.listen(process.env.port, () => {
+    console.log("On a website.");
 });
