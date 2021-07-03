@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 
 app.set('views', `${__dirname}/views`);
 app.set('view engine', 'ejs');
-app.use(express.static(__dirname));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -13,6 +12,7 @@ const bedwarsRoute = require("./routes/bedwarsRoute");
 
 app.use('/', indexRoute);
 app.use('/bedwars', bedwarsRoute);
+app.use('/bedwars/stats/:user', bedwarsRoute);
 
 app.listen(process.env.PORT, () => {
     console.log("On a website.");
